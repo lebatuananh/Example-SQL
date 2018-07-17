@@ -1,0 +1,90 @@
+- cơ sở dữ liệu là 1 tập hợp dữ liệu có tổ chức
+- SQL dùng để thực thi cơ sở dữ liệu
+- Kiểu dữ liệu SQL:
+    +Kiểu dữ liệu
+        bigint	-9,223,372,036,854,775,808	9,223,372,036,854,775,807
+        int	-2,147,483,648	2,147,483,647
+        smallint	-32,768	32,767
+        tinyint	0	255
+        bit	0	1
+        decimal	-10^38 +1	10^38 -1
+        numeric	-10^38 +1	10^38 -1
+        money	-922,337,203,685,477.5808	+922,337,203,685,477.5807
+        smallmoney	-214,748.3648	+214,748.3647
+    +Kiểu dữ liệu Approximate Numeric trong SQL
+        Kiểu dữ liệu	Từ	Tới
+        float	-1.79E + 308	1.79E + 308
+        real	-3.40E + 38	3.40E + 38
+
+    +Kiểu dữ liệu Date và Time trong SQL
+        Kiểu dữ liệu
+        datetime
+            Jan 1, 1753	Dec 31, 9999
+        smalldatetime	Jan 1, 1900	Jun 6, 2079
+        date	Lưu giữ một date dạng June 30, 1991
+        time	Lưu giữ một time dạng 12:30 P.M.
+
+
+    +Kiểu dữ liệu Character String (kiểu chuỗi) trong SQL
+        Kiểu dữ liệu	
+        char	Không chứa Unicode, độ dài tối đa là 8.000 ký tự (các ký tự không phải Unicode có độ dài cố định)
+        varchar	Không chứa Unicode, độ dài tối đa là 8.000 ký tự (dữ liệu không phải Unicode có độ dài có thể thay đổi)
+        varchar(max)	Không chứa Unicode, độ dài tối đa là 231 ký tự, dữ liệu không phải Unicode có độ dài có thể thay đổi (chỉ với SQL Server 2005)
+        text	Không chứa Unicode, độ dài tối đa là 2.147.483.647 ký tự, dữ liệu không phải Unicode có độ dài có thể thay đổi
+        Kiểu dữ liệu Unicode Character String (kiểu chuỗi có chứa Unicode) trong SQL
+        Kiểu dữ liệu	Miêu tả
+        nchar	Độ dài tối đa là 4.000 ký tự (Unicode có độ dài cố định)
+        nvarchar	Độ dài tối đa là 4.000 ký tự (Unicode có độ dài có thể thay đổi)
+        nvarchar(max)	Độ dài tối đa là 231 ký tự, Unicode có độ dài có thể thay đổi (chỉ với SQL Server 2005)
+        ntext	Độ dài tối đa là 1.073.741.823 ký tự (Unicode có độ dài có thể thay đổi)
+
+
+    +Kiểu dữ liệu Binary trong SQL
+        Kiểu dữ liệu	
+        binary	Độ dài tối đa là 8.000 byte (dữ liệu binary có độ dài cố định )
+        varbinary	Độ dài tối đa là 8.000 byte (dữ liệu binary có độ dài có thể thay đổi)
+        varbinary(max)	Độ dài tối đa là 231 byte, dữ liệu binary có độ dài có thể thay đổi (chỉ với SQL Server 2005)
+        image	Độ dài tối đa là 2.147.483.647 byte (dữ liệu binary có độ dài có thể thay đổi)
+
+    +Các kiểu dữ liệu khác trong SQL
+        Kiểu dữ liệu
+        sql_variant	Lưu giữ các giá trị của các kiểu dữ liệu đa dạng được hỗ trợ bởi SQL Serverv, ngoại trừ text, ntext, và timestamp
+        timestamp	Lưu giữ một số duy nhất mà được cập nhật mỗi khi một hàng được cập nhật
+        uniqueidentifier	Lưu giữ một định danh chung (Globally Unique Identifier - GUID)
+        xml	Lưu giữ dữ liệu XML. Bạn có thể lưu giữ xml trong một column hoặc một biến (chỉ với SQL Server 2005)
+        cursor	Tham chiếu tới một đối tượng con trỏ (Cursor)
+        table	Lưu giữ một tập hợp kết quả để xử lý vào lần sau
+
+
+-Toán tử: 
+    +Toán tử số học trong SQL
+        Toán tử	Miêu tả	Ví dụ
+        +	Phép cộng	a + b cho kết quả 90
+        -	Phép trừ	a - b cho kết quả -30
+        *	Phép nhân	a * b cho kết quả 1800
+        /	Phép chia	b / a cho kết quả 2
+        %	Phép chia lấy phần dư	b % a cho kết quả 0
+    +Toán tử so sánh trong SQL
+        Toán tử	Miêu tả	Ví dụ
+        =	Kiểm tra xem giá trị của hai toán hạng có cân bằng không, nếu có thì điều kiện trở thành true	(a = b) là không true
+        !=	Kiểm tra xem giá trị của hai toán hạng là cân bằng hay là không, nếu không cân bằng thì điều kiện trở thành true	(a != b) là true
+        <>	Kiểm tra xem giá trị của hai toán hạng là cân bằng hay là không, nếu không cân bằng thì điều kiện trở thành true	(a <> b) là true
+        >	Kiểm tra xem giá trị của toán hạng trái có lớn hơn giá trị của toán hạng phải không, nếu có thì điều kiện trở thành true 	(a > b) là không true
+        <	Kiểm tra xem giá trị của toán hạng trái có nhỏ hơn giá trị của toán hạng phải không, nếu có thì điều kiện trở thành true 	(a < b) là true
+        >=	Kiểm tra xem giá trị của toán hạng trái có lớn hơn hoặc bằng giá trị của toán hạng phải không, nếu có thì điều kiện trở thành true 	(a >= b) là không true
+        <=	Kiểm tra xem giá trị của toán hạng trái có nhỏ hơn hoặc bằng giá trị của toán hạng phải không, nếu có thì điều kiện trở thành true 	(a <= b) là true
+        !<	Kiểm tra xem giá trị của toán hạng trái là không nhỏ hơn giá trị của toán hạng phải không, nếu có thì điều kiện trở thành true 	(a !< b) là false
+        !>	Kiểm tra xem giá trị của toán hạng trái là không lớn hơn giá trị của toán hạng phải không, nếu có thì điều kiện trở thành true 	(a !> b) là true 
+    +Toán tử logic trong SQL
+        Toán tử	Miêu tả
+        ALL	Toán tử ALL được sử dụng để so sánh một giá trị với tất cả giá trị trong tập giá trị khác
+        AND	Toán tử AND cho phép sự tồn tại của nhiều điều kiện trong mệnh đề WHERE của một lệnh SQL
+        ANY	Toán tử ANY được sử dụng để so sánh một giá trị với bất kỳ giá trị thích hợp nào trong danh sách tùy theo điều kiện
+        BETWEEN	Toán tử BETWEEN được sử dụng để tìm các giá trị mà là trong một tập giá trị, được cung cấp giá trị nhỏ nhất và giá trị lớn nhất
+        EXISTS	Toán tử EXISTS được sử dụng để tìm sự có mặt của một row trong một bảng đã cho mà thỏa mãn điều kiện cụ thể
+        IN	Toán tử IN được sử dụng để so sánh một giá trị với một danh sách các giá trị hằng mà đã được xác định
+        LIKE	Toán tử LIKE được sử dụng để so sánh một giá trị với các giá trị tương tự bởi sử dụng các toán tử Wildcard
+        NOT	Toán tử NOT đảo ngược ý nghĩa của toán tử logic khi được sử dụng cùng với toán tử logic đó. Ví dụ: NOT EXISTS, NOT BETWEEN, NOT IN, ... Đây là một toán tử phủ định
+        OR	Toán tử OR được sử dụng để kết hợp nhiều điều kiện trong mệnh đề WHERE của một lệnh SQL
+        IS NULL	Toán tử IS NULL được sử dụng để so sánh một giá trị với một giá trị NULL
+        UNIQUE	Toán tử UNIQUE tìm kiếm tính đơn nhất trong mỗi row của một bảng đã cho (đơn nhất hay duy nhất hay không có bản sao nào)    
