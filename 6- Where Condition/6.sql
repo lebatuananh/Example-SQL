@@ -18,4 +18,4 @@ ORDER BY ProductName
 SELECT *
 FROM Products
 WHERE CategoryID = 6 AND (UnitPrice > 20 OR UnitPrice < 10) AND NOT Discontinued = 0
-ORDER BY ProductName
+ORDER BY ProductName 
