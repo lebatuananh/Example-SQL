@@ -1,0 +1,21 @@
+USE [C:\DOCUMENTS AND SETTINGS\FABRICE\APPLICATION DATA\LINQPAD\SAMPLES\LINQ IN ACTION\NORTHWND.MDF]
+
+SELECT *
+FROM Products
+WHERE UnitPrice > 20 OR UnitPrice < 10
+ORDER BY UnitPrice DESC
+
+SELECT *
+FROM Products
+WHERE UnitPrice > 20 AND UnitPrice < 90
+ORDER BY UnitPrice DESC
+
+SELECT *
+FROM Products
+WHERE NOT Discontinued = 0
+ORDER BY ProductName
+
+SELECT *
+FROM Products
+WHERE CategoryID = 6 AND (UnitPrice > 20 OR UnitPrice < 10) AND NOT Discontinued = 0
+ORDER BY ProductName
