@@ -1,0 +1,4 @@
+USE [C:\DOCUMENTS AND SETTINGS\FABRICE\APPLICATION DATA\LINQPAD\SAMPLES\LINQ IN ACTION\NORTHWND.MDF]
+SELECT * FROM Suppliers
+UPDATE Suppliers SET Region='NSW' WHERE Region is NULL
+--Nếu không có điều kiện nó sẽ update toàn bộ bản ghi
