@@ -1,0 +1,7 @@
+
+    -INNER JOIN – trả về hàng khi có một sự phù hợp trong cả hai bảng.
+    -LEFT JOIN – trả về tất cả các hàng từ bảng bên trái, ngay cả khi không có sự phù hợp trong bảng bên phải.
+    -RIGHT JOIN – trả về tất cả các hàng từ bảng bên phải, ngay cả khi không có sự phù hợp nào ở bảng bên trái.
+    -FULL JOIN – trả về hàng khi có một sự phù hợp trong một trong các bảng.
+    -SELF JOIN – được sử dụng để tham gia một bảng với chính nó như thể bảng đó là hai bảng, tạm thời đổi tên ít nhất một bảng trong câu lệnh SQL.
+    -CARTESIAN JOIN – trả về sản phẩm Cartesian của bộ bản ghi từ hai hoặc nhiều bảng kết nối.
