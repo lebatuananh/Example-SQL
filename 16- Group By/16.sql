@@ -1,0 +1,15 @@
+USE [C:\DOCUMENTS AND SETTINGS\FABRICE\APPLICATION DATA\LINQPAD\SAMPLES\LINQ IN ACTION\NORTHWND.MDF]
+SELECT
+  s.Country,
+  COUNT(SupplierID) AS Total
+FROM Suppliers s
+GROUP BY Country ORDER BY COUNT(SupplierID)
+
+SELECT * FROM Orders
+SELECT * FROM [Order Details]
+SELECT * FROM Shippers
+SELECT * FROM Employees
+
+SELECT E.FirstName,E.LastName,COUNT(O.OrderID) Total FROM Orders O
+LEFT JOIN Employees E on O.EmployeeID = E.EmployeeID
+GROUP BY E.FirstName,E.LastName ORDER BY COUNT(O.OrderID)
