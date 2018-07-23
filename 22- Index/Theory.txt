@@ -1,0 +1,5 @@
+-Tạo index cho cột có tần suất tìm nhiều
+-Có 2 loại index:
+    +Clustered: sắp sếp theo dạng vật lý sắp xếp đúng theo trên bảng cơ sở dữ liệu, 1 cơ sở dữ liệu có duy nhất 1 Clustered 
+    sử dụng cho tạo khoá chính (tên sẽ sắp xếp theo alphalbet)
+    +Non Clustered:
