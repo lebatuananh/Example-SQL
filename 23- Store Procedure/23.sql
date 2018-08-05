@@ -26,7 +26,7 @@ BEGIN
 END
 
 DECLARE @totalRow INT
-EXEC usp_GetOrderPaging 2,10,@totalRow OUTPUT
-SELECT @totalRow
+EXEC usp_GetOrderPaging 1,800,@totalRow OUTPUT
+SELECT @totalRow AS TotalRow
 
 
